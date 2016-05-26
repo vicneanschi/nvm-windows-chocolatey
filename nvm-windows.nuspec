@@ -5,28 +5,30 @@
     <!-- Read this before publishing packages to chocolatey.org: https://github.com/chocolatey/chocolatey/wiki/CreatePackages -->
     <id>nvm-windows</id>
     <title>nvm-windows (Install)</title>
-    <version>__REPLACE__</version>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
-    <owners>__REPLACE_YOUR_NAME__</owners>
-    <summary>__REPLACE__</summary>
-    <description>__REPLACE__MarkDown_Okay 
+    <version>1.1.0</version>
+    <authors>https://github.com/coreybutler/nvm-windows</authors>
+    <owners>Valeri Vicneanschi</owners>
+    <summary>Manage multiple installations of node.js on a Windows computer.</summary>
+    <description>tl;dr nvm, but for Windows.
+    There are situations where the ability to switch between different versions of Node.js can be very useful. 
+    For example, if you want to test a module you're developing with the latest bleeding edge version without uninstalling the stable version of node, this utility can help.
     </description>
-    <projectUrl></projectUrl>
-    <packageSourceUrl></packageSourceUrl>
+    <projectUrl>https://github.com/coreybutler/nvm-windows</projectUrl>
+    <packageSourceUrl>https://github.com/vicneanschi/nvm-windows-chocolatey</packageSourceUrl>
     <!--<projectSourceUrl></projectSourceUrl>
     <docsUrl></docsUrl>
     <mailingListUrl></mailingListUrl>
     <bugTrackerUrl></bugTrackerUrl>-->
-    <tags>nvm-windows admin SPACE_SEPARATED</tags>
+    <tags>nvm-windows admin nodejs node.js windows nvm</tags>
     <copyright></copyright>
-    <licenseUrl></licenseUrl>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/nvm-windows.png</iconUrl>-->
     <!--<dependencies>
       <dependency id="" version="__VERSION__" />
       <dependency id="" />
     </dependencies>-->
-    <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes>
+    <releaseNotes>Merged support for Node v4.x.</releaseNotes>
     <!--<provides></provides>-->
   </metadata>
   <files>
