@@ -7,5 +7,4 @@ Install-ChocolateyZipPackage $packageName $url $toolsDir
 
 Install-ChocolateyInstallPackage -PackageName $packageName -FileType 'EXE' `
 	-SilentArgs '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' `
-	-File $fileLocation `
-	-ValidExitCodes = @(0)
+	-File $fileLocation
