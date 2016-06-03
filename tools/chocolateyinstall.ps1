@@ -1,43 +1,11 @@
-﻿
-$ErrorActionPreference = 'Stop';
-
-
-$packageName= 'nvm-windows'
+﻿$packageName= 'nvm'
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = 'https://github.com/coreybutler/nvm-windows/releases/download/1.1.0/nvm-setup.zip'
-
-$packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE'
-  url           = $url
-  url64bit      = $url64
-
-  validExitCodes= @(0)
-  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-
-  softwareName  = 'nvm-windows*'
-  checksum      = ''
-  checksumType  = 'md5'
-  checksum64    = ''
-  checksumType64= 'md5'
-}
-
-
-
+$fileLocation = Join-Path $toolsDir 'nvm-setup.exe'
 
 Install-ChocolateyZipPackage $packageName $url $toolsDir
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+Install-ChocolateyInstallPackage -PackageName $packageName -FileType 'EXE' `
+	-SilentArgs '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' `
+	-File $fileLocation `
+	-ValidExitCodes = @(0)
